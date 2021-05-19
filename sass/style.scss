@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #8eb08e;
+}
+.game-title, #count{
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+.board{ 
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 2%;
+}
+.card{
+   box-shadow: 1px 1px 1px black;
+   cursor: pointer;
+}
+@media (min-width: 769px){
+    .card{ 
+       min-width: calc(20% - 15px);
+       height: calc(25% - 10px); 
+    }
+}
+@media (max-width: 768px){
+    .card{ 
+       min-width: calc(25% - 10px);
+       height: calc(20% - 10px); 
+    }
+}
+[class*="img-"]{
+    background-position: center;
+    background-size: cover;
+    background-repeat: space;
+}
+.img-1{
+    background-image: url('https://i.postimg.cc/cHHXHTp9/sliczna-smieszna-wiewiorka-ruda-krzaczasty-ogoniasta-78621-5027.jpg');
+}
+.img-2{
+    background-image: url('https://i.postimg.cc/B6VN1Hsq/baczna-plowa-sowa-w-lato-lesie-158217-386.jpg');
+}
+.img-3{
+    background-image: url('https://i.postimg.cc/4NVksNbK/jez.jpg');
+}
+.img-4{
+    background-image: url('https://i.postimg.cc/Pfv0Qr76/rys-euroazjatycki-zdjecie-ilustracyjne.jpg');
+}
+.img-5{
+    background-image: url('https://i.postimg.cc/dtmH57j9/zabawny-niedzwiadek-siedzi-na-ziemi-w-lesie-265142-3231.jpg');
+}
+.img-6{
+    background-image: url('https://i.postimg.cc/xCzgMqdM/dzieciol-3.jpg');
+}
+.img-7{
+    background-image: url('https://i.postimg.cc/XvZg6Xdm/image.jpg');
+}
+.img-8{
+   background-image: url('https://i.postimg.cc/fTwjT8Yx/samiec-sarny-w-wysokiej-koniczynie-mokrej-od-rosy-158217-228.jpg'); 
+}
+.img-9{
+    background-image: url('https://i.postimg.cc/LsZj0wMM/zajac-146721535357052524owjbtmd.jpg');
+}
+.img-10{
+    background-image: url('https://i.postimg.cc/CLPDMShg/selektywne-skupienie-sie-jerzyka-otoczonego-zielenia-w-swietle-slonecznym-181624-27726.jpg');
+}
+.hidden{
+        background-image: url('https://image.freepik.com/darmowe-wektory/akwarele-tla-z-lisci_125540-640.jpg');
+}
