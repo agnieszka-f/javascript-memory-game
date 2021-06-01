@@ -7,32 +7,29 @@
 	</head>
 	<body>
 		    <h1 class="game-title">Memory</h1>
-	        
+	    
 	    <div class="board">
-	        <div class="card" id="card-0"></div>
-	        <div class="card" id="card-1"></div>
-	        <div class="card" id="card-2"></div>
-	        <div class="card" id="card-3"></div>
-	        <div class="card" id="card-4"></div>
-	        <div class="card" id="card-5"></div>
-	        <div class="card" id="card-6"></div>
-	        <div class="card" id="card-7"></div>
-	        <div class="card" id="card-8"></div>
-	        <div class="card" id="card-9"></div>
-	        <div class="card" id="card-10"></div>
-	        <div class="card" id="card-11"></div>
-	        <div class="card" id="card-12"></div>
-	        <div class="card" id="card-13"></div>
-	        <div class="card" id="card-14"></div>
-	        <div class="card" id="card-15"></div>
-	        <div class="card" id="card-16"></div>
-	        <div class="card" id="card-17"></div>
-	        <div class="card" id="card-18"></div>
-	        <div class="card" id="card-19"></div>
+	    
 	    </div>
+
+		<div class="lock"></div>
 		<div class="row">
-		    <div id="info"></div><div id="button-new-game"><a href="#">Nowa gra</a></div>
+		    <div id="info"></div>
+			<div>
+				<form class="form-new-game">
+					<label>Rozmiar planszy:</label>
+					<input id="board-10" type="radio" name="option-board-size" value="10">10</label>
+					<input id="board-20" type="radio" name="option-board-size" value="20" checked>20</label>
+					<button id="button-new-game">Nowa gra</button>
+				</form>
+			</div>
 		</div>
+		<script id="template-board" type="text/x-handlebars-template">
+			{{#each cardList}}
+				<div class="card" id="card-{{id}}" ></div>
+			{{/each}}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 	    <script src="js/script.js"></script>
 	</body>
 </html>

@@ -107,10 +107,25 @@ body {
 	text-align: center;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	box-shadow: 1px 1px 1px black;
+	margin: auto 3px;
 }
 #button-new-game a{
 	text-decoration: none;
 	color: #758875;
 	font-weight: bold;
+}
+.lock{ 
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: all;
+	display: none;
+}
+.display-layer{
+	display: block; 
+}
+[name="board-size"]{
+	margin: auto 3px;
 }
