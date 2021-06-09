@@ -35,6 +35,12 @@
 				card.addEventListener('click', thisGame.cardClickHandler);
 			}
 		}
+		killAction() {
+			const thisGame = this; 
+			for(let card of thisGame.cards){ 
+				card.removeEventListener('click', thisGame.cardClickHandler);
+			}
+		}
 		cardClickHandler(event){ 
 			event.preventDefault();
 			const clickedCard = this; 
@@ -96,6 +102,7 @@
 		initFormListener: function(){
 			this.newGame.addEventListener('click', function(event){
 				event.preventDefault(); 
+				//app.game.killAction();
 				app.init(); 
 			});
 		
@@ -144,10 +151,12 @@
 		},
 		init: function(){ 
 			this.initElements();
-			this.initFormListener();
+			//this.initFormListener();
 			this.initBoard();
 			this.game = new Game();
+			console.log(this);
 		}
 	}; 
 	app.init(); 
+	app.initFormListener();
 }
